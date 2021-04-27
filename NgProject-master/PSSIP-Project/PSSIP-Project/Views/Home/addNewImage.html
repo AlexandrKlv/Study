@@ -1,0 +1,44 @@
+<h1 align="center">
+    <p>Добавление новой картинки </p>
+
+</h1>
+
+
+
+<div id='addNewImg' class="col-sm-12 col-md-12 col-lg-6 col-ex-6">
+    <p>
+        Введите имя лесного обитателя:
+        <input type="text" ng-model="img.name">
+    </p>
+    <p align="center">
+        Выберите картинку на своем компьютере:
+        <input type="file" fileread="img.data">
+    </p>
+    
+    <p>
+        Введите оценку данной фотографии:
+        <label ng-repeat="rate in arrayOfRates">
+            <input type="radio" ng-model="img.star" ng-checked="newImgRate==rate" ng-value="rate" />
+            {{rate}}
+        </label>
+    </p>
+    <input type="button" ng-click="addImg()" value="Добавить картинку">
+    
+
+  
+
+</div>
+<div id="preview" class="col-sm-12 col-md-12 col-lg-6 col-ex-6">
+    <p align="center">
+        {{img.name}}
+        <br>
+        <img ng-src="{{img.data}}"/>
+        <br>
+        {{img.desc}}
+        Оценка
+        {{img.star}}
+    </p>
+</div>
+
+
+

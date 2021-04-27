@@ -1,0 +1,26 @@
+<h1 align="center">
+    <p ng-mouseover="toggleTooltip()" ng-mouseout="hideTooltip()"><br><br>Галерея<br><br><br> </p>
+</h1>
+<h2>
+    <p style="font-size:20px; color:black; " class="tooltipLeft" ng-show="showtooltipLeft"> <br> <br><br><br> Посмотри какие <br>тут классные <br>фотки!</p>
+</h2>
+
+<div align="right" class="ShwedColor col-sm-12 col-md-12 col-lg-12 col-ex-12">
+
+    <label ng-repeat="extension in extensionsArray">
+        {{extension.name}}
+        <input type="checkbox" ng-model="extension.isChecked">
+    </label>
+</div>
+
+<div ng-repeat="img in Images | filter:filterByExtension" class="imageGalleryClass foc col-sm-12 col-md-6 col-lg-4 col-ex-4"  border="0" tabindex="1" >
+    <p>
+
+        <img ng-src="{{img.Url}}"> 
+        <br>
+        <div class="caption">
+            <span class="title">{{img.Name}}</span>
+            <span class="info">Оценка: {{img.Star}}</span>
+        </div>
+	</p>
+</div>
