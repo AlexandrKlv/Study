@@ -17,3 +17,7 @@
 # PSSIP-master 
 
 Решение задач по теории вероятностей и законам вероятного распределения.
+
+# My CodeWars
+
+[link to CodeWars: AlexandrKlv] (https://www.codewars.com/users/AlexandrKlv)
